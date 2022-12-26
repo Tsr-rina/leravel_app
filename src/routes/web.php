@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// はじめに書いてあったやつ
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// getで/folders/{id}/tasksにリクエストが来たらTaskControllerのindexメソッドを呼び出す
+// ->はルートに名前をつけてる ->アプリの中でURLを参照するときはこの名前を使う
+Route::get('/folders/{id}/tasks', 'App\Http\Controllers\TaskController@index') ->name('tasks.index');
