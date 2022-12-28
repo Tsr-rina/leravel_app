@@ -19,6 +19,10 @@ class TaskController extends Controller
         // 選ばれたフォルダを取得する
         $current_folder = Folder::find($id);
 
+        if (is_null($current_folder)){
+            abort(404);
+        }
+
         // 選ばれたフォルダに紐づくタスクを取得する
         $tasks = $current_folder->tasks()->get();
 
