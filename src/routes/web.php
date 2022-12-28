@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,11 +19,15 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+// Auth::routes();
+
 Route::get('/', 'App\Http\Controllers\HomeController@index')->name('home');
+
+Route::get('/articles/{id}/picks/', 'App\Http\Controllers\ArticleController@index')->name('articles.index');
 
 // getで/folders/{id}/tasksにリクエストが来たらTaskControllerのindexメソッドを呼び出す
 // ->はルートに名前をつけてる ->アプリの中でURLを参照するときはこの名前を使う
-Route::get('/folders/{id}/tasks', 'App\Http\Controllers\TaskController@index') ->name('tasks.index');
+Route::get('/folders/{folder}/tasks', 'App\Http\Controllers\TaskController@index') ->name('tasks.index');
 
 Route::get('/folders/create', 'App\Http\Controllers\FolderController@showCreateForm')->name('folders.create');
 Route::post('/folders/create', 'App\Http\Controllers\FolderController@create');
