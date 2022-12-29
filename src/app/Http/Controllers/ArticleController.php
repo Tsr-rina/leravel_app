@@ -3,11 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Pocket;
 
 class ArticleController extends Controller
 {
     public function index()
     {
-        return "🦊Hello New World🐿";
+        $pockets = Pocket::all();
+
+        // view(テンプレートファイル名, テンプレートに渡すデータ)
+        return view('picks/index', [
+            // キーがテンプレ側で参照する値
+            'pockets' => $pockets,
+        ]);
     }
 }
