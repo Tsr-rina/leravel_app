@@ -13,7 +13,7 @@ class ArticleController extends Controller
 
         // view(テンプレートファイル名, テンプレートに渡すデータ)
         return view('picks/index', [
-            // キーがテンプレ側で参照する値
+            // キーがテンプレ側で参照する値(変数名)
             'pockets' => $pockets,
         ]);
     }
