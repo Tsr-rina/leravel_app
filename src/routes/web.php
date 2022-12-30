@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', 'App\Http\Controllers\HomeController@index')->name('home');
 
-Route::get('/articles/{id}/picks/', 'App\Http\Controllers\ArticleController@index')->name('articles.index');
+Route::get('/articles/{id}/picks/', 'App\Http\Controllers\ArticleController@index')->name('picks.index');
 
 // getで/folders/{id}/tasksにリクエストが来たらTaskControllerのindexメソッドを呼び出す
 // ->はルートに名前をつけてる ->アプリの中でURLを参照するときはこの名前を使う
