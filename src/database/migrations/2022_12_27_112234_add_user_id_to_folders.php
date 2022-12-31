@@ -14,10 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::table('folders', function (Blueprint $table) {
-            $table->integer('user_id')->unsigned();
+            // $table->integer('user_id')->unsigned();
 
-            // 外部キーを設定する
-            $table->foreign('user_id')->references('id')->on('users');
+            // // 外部キーを設定する
+            // $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
@@ -29,7 +29,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('folders', function (Blueprint $table) {
-            $table->dropColumn('user_id');
+            // $table->dropColumn('user_id');
         });
     }
 };
