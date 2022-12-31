@@ -13,6 +13,7 @@
   <nav class="my-navbar">
     <a class="my-navbar-brand" href="/">Try to find your TREASURE</a>
   </nav>
+  
 </header>
 
 
