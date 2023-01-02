@@ -89,39 +89,48 @@
     <div class="row">
       <div class="col col-md-12">
         <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="col col-md-6">
+              <div class="iframe-wrapper">
+                <iframe class="col col-md-6" src="https://oggi.jp/beauty" target="_blank" frameborder="5"></iframe>
+              </div>
+            </div>
+            <div class="col col-md-6">
+              <div class="iframe-wrapper">
+                <iframe class="col col-md-6" src="https://www.vogue.co.jp/" target="_blank" frameborder="5"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="panel-footer">
+            🦊⛰
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col col-md-12">
+        <div class="panel panel-default">
           <div class="panel-heading panel-heading-color">
             Pick
           </div>
 
           <div class="panel-body">
-            <div class="text-right">
-              <a href="#" class="btn btn-default btn-block">
-                タスクを追加する
-              </a>
+            <div class="row">
+            @foreach($picks as $pick)
+              <div class="col col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ $pick->title }}</h5>
+                    <div class="card-text">{{ $pick->memo }}</div>
+                    <a href="{{ $pick->url }}" class="card-link">{{ $pick->url }}</a>
+                  </div>
+                </div>
+              </div>
+            @endforeach
             </div>
           </div>
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Title</th>
-                <th>URL</th>
-                <th>Memo</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              @foreach($picks as $pick)
-                <tr>
-                  <td>{{ $pick->title }}</td>
-                  <td>
-                    <a href="{{ $pick->url}}">{{ $pick-> url}}</a>
-                  </td>
-                  <td>{{ $pick->memo }}</td>
-                  <td><a href="#">編集</a></td>
-                </tr>
-              @endforeach
-            </tbody>
-          </table>
           <div class="panel-footer">
             🐿🦊⭐️
           </div>
