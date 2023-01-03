@@ -19,8 +19,6 @@ class ArticleController extends Controller
 
         $picks = Pick::where('article_id', $current_pocket->id)->get();
 
-
-
         // view(テンプレートファイル名, テンプレートに渡すデータ)
         return view('picks/index', [
             // キーがテンプレ側で参照する値(変数名)
