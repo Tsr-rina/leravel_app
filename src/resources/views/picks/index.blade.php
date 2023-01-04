@@ -78,6 +78,13 @@
         </div>
       </div>
     </div>
+    <!-- 以下change -->
+    <div class="card">
+      <h5 class="card-title">EC2 page</h5>
+      <div class="card-text">Look Look Look</div>
+      <a href="http://54.250.90.105" class="card-link">http://54.250.90.105</a>
+    </div>
+    <iframe src="http://54.250.90.105" frameborder="0"></iframe>
   </div>
 </main>
 
