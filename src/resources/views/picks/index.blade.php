@@ -32,7 +32,7 @@
 
         <!-- panelフッター -->
         <div class="panel-footer">
-          🐿🦊
+          🐿🦊⭐️
         </div>
       </nav>
     </div>
@@ -63,10 +63,35 @@
   </div>
   <!-- 以下change -->
   <div class="row">
-    <iframe src="http://54.250.90.105" frameborder="0"></iframe>
-    <a href="https://docs.google.com/document/d/1OUJIHNLVCIBDzR9DFeebSNZAZYtrSPehaqiG6IYrVP8/edit?usp=sharing">
-      <button>to Log</button>
-    </a>
+    <div class="panel panel-default">
+      <div class="panel-heading panel-heading-color">Form</div>
+      <div class="panel-body">
+        <form action="http://54.65.203.254/world.php" method="post">
+              <div class="form-group">
+                <label>関東</label>
+                <select class="form-control" name="ken">
+                  <option value="tokyo">東京</option>
+                  <option value="saitama">埼玉</option>
+                  <option value="kanagawa">神奈川</option>
+                </select>
+              </div>
+              <div>
+                <input type="submit" value="探す">
+              </div>
+        </form>
+      </div>
+      <div class="panel-footer">
+        🐿🦊⭐️
+      </div>
+    </div>
+    <p>
+    <?php
+    if(!empty($_POST)){
+            $k_name = $_POST['ken'];
+            echo "選択された県は".$k_name;
+    }
+    ?>
+    </p>
   </div>
 </div>
 @endsection
