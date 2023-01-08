@@ -84,14 +84,6 @@
         🐿🦊⭐️
       </div>
     </div>
-    <p>
-    <?php
-    if(!empty($_POST)){
-            $k_name = $_POST['ken'];
-            echo "選択された県は".$k_name;
-    }
-    ?>
-    </p>
   </div>
 </div>
 @endsection
