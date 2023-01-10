@@ -66,7 +66,7 @@
     <div class="panel panel-default">
       <div class="panel-heading panel-heading-color">Form</div>
       <div class="panel-body">
-        <form action="http://54.65.203.254/world.php" method="post">
+        <form action="http://13.112.136.188/world.php" method="post">
               <div class="form-group">
                 <label>関東</label>
                 <select class="form-control" name="ken">
